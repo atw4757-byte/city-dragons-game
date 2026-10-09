@@ -9,15 +9,20 @@ Hunter Vision. A hobby game by Andy Williams and Archon, built in Unreal Engine 
 - Windows 10 or 11, 64-bit, DirectX 12
 - GPU: NVIDIA RTX 3060 Ti class or better recommended (DLSS is used when available)
 - RAM: 32 GB recommended (the city streams about 17 GB)
-- Disk: about 40 GB free during install (18 GB download + 18 GB extracted); 19 GB after you delete the parts
+- Disk: about 21 GB free with the installer (40 GB for the manual route)
 
-## Install
-1. Download every `CityDragons-win64.tar.part*` file and `Join-and-Extract.bat` from the latest release into one folder.
-2. Double-click `Join-and-Extract.bat`. It joins the parts and extracts a `CityDragons` folder (uses Windows' built-in `tar`).
-3. Open `CityDragons` and double-click `Play City Dragons.bat`.
+## Install (one click)
+1. Download **`CityDragons-Setup.exe`** from the [latest release](../../releases/latest) and run it.
+2. Press Enter to install to `C:\Games` (or type another folder). It downloads the game (18.4 GB), checks every piece
+   against `SHA256SUMS.txt`, installs it, and puts a **City Dragons** shortcut on your desktop.
 
-Windows SmartScreen may warn because the game is unsigned: More info, then Run anyway.
+Windows SmartScreen may warn because the installer is unsigned: More info, then Run anyway. Its full source is in
+[`installer/Setup.cs`](installer/Setup.cs) (built with the C# compiler that ships with Windows).
 First launch compiles some shaders, so give it a minute.
+
+### Manual install (no installer)
+Download every `CityDragons-win64.tar.part*` file and `Join-and-Extract.bat` into one folder, double-click the .bat, then
+run `CityDragons\Play City Dragons.bat`.
 
 ## Controls
 | Key | Action |
